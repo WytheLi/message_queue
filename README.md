@@ -47,7 +47,7 @@
 - 工作原理
 ![](img/rabbitmq.jpg)
 
-- RabbitMQ 安装
+- 基于docker安装RabbitMQ
     - [RabbitMQ的docker镜像](https://github.com/docker-library/docs/tree/master/rabbitmq)
     - `docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 rabbitmq:alpine`
     
@@ -67,6 +67,11 @@
     - 扇形交换机：fanout 转发消息到所有绑定队列
     - 主题交换机：topic按RK规则转发(BK模糊匹配RK)
     - 首部交换机：headers根据发送消息中的headers属性进行匹配 
+    
+### RocketMQ
+- [基于docker安装RocketMQ](https://github.com/apache/rocketmq-externals)
+- RocketMQ的python客户端rocketmq-client-python：`pip install rocketmq-client-python`
+
 
  
 
@@ -103,3 +108,5 @@
 sudo make install DESTDIR='/home/willi/.virtualenvs/dev/lib/python3.5/site-packages'
 ```
 - [WebSocket和Stomp协议](https://www.jianshu.com/p/db21502518b9)
+- [基于 Docker 安装 RocketMQ](https://www.jianshu.com/p/706588323276)
+- [Rocketmq原理&最佳实践](https://www.jianshu.com/p/2838890f3284)
