@@ -16,6 +16,7 @@
 
 - 客户端工具
     1. Apache Kafka的Python客户端：kafka-python
+        - [官方文档](https://kafka-python.readthedocs.io/en/master/usage.html)
     2. Confluent kafka的Python客户端： confluent-kafka-python
         - [github地址](https://github.com/confluentinc/confluent-kafka-python)
         - [官方文档](https://docs.confluent.io/current/clients/confluent-kafka-python/index.html#consumer)
