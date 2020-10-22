@@ -74,6 +74,49 @@
 - RocketMQ的python客户端rocketmq-client-python：`pip install rocketmq-client-python`
 
 
+
+### Celery
+1、后台启动celery worker
+```
+celery -D -A celery_tasks worker -l info -f logs/celery.log
+```
+
+```
+# 启动
+celery worker -A tasks -l info  # -A 后是模块名
+
+>>> ValueError: not enough values to unpack (expected 3, got 0)
+
+# 这是win 10 在使用 Celery 4.x 的时候会有这个问题，解决方式可以是改用 Celery 3.x 版本；或者以下两种方法
+# 一种是安装 eventlet 扩展：
+pip install eventlet
+celery -A <mymodule> worker -l info -P eventlet
+
+# 另一种是添加个 FORKED_BY_MULTIPROCESSING = 1 的环境变量(推荐这种方式)：
+import os
+os.environ.setdefault('FORKED_BY_MULTIPROCESSING', '1')
+```
+
+2、flower web监控
+
+2.1 docker安装(亲测未成功)
+```
+# ps: --link后面应该是跟的镜像名(NAMES)，而不是IMAGE，docker ps查看获得
+docker run -d –p 5555:5555 --name flower --link redis:redis placr/flower
+```
+> 浏览器访问：http://127.0.0.1:5555
+
+2.2 pip安装
+- pip 安装 flower
+```
+pip install flower
+```
+- 运行flower
+```
+# 从celery运行(推荐)
+celery -D -A celery_app flower --address=127.0.0.1 --port=5555 -l info
+
+```
  
 
 ### 参考
@@ -111,3 +154,4 @@ sudo make install DESTDIR='/home/willi/.virtualenvs/dev/lib/python3.5/site-packa
 - [WebSocket和Stomp协议](https://www.jianshu.com/p/db21502518b9)
 - [基于 Docker 安装 RocketMQ](https://www.jianshu.com/p/706588323276)
 - [Rocketmq原理&最佳实践](https://www.jianshu.com/p/2838890f3284)
+- [celery 定时任务 ，异步邮箱任务，flower web监控](https://www.jianshu.com/p/4708f752635b)
