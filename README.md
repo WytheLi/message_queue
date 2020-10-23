@@ -17,10 +17,14 @@
 - 客户端工具
     1. Apache Kafka的Python客户端：kafka-python
         - [官方文档](https://kafka-python.readthedocs.io/en/master/usage.html)
-        - [Apache Kafka桌面客户端](https://www.conduktor.io/)
+        
     2. Confluent kafka的Python客户端： confluent-kafka-python
         - [github地址](https://github.com/confluentinc/confluent-kafka-python)
         - [官方文档](https://docs.confluent.io/current/clients/confluent-kafka-python/index.html#consumer)
+        
+    3. Kafka 可视化工具
+        - [Kafka 可视化工具（Kafka Tool）](https://www.kafkatool.com/download.html)
+        - [conduktor Kafka桌面客户端](https://www.conduktor.io/)
     
 - Docker镜像  
 [Confluent kafka 的docker镜像](https://github.com/confluentinc/cp-docker-images)
