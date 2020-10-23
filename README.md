@@ -17,6 +17,7 @@
 - 客户端工具
     1. Apache Kafka的Python客户端：kafka-python
         - [官方文档](https://kafka-python.readthedocs.io/en/master/usage.html)
+        - [Apache Kafka桌面客户端](https://www.conduktor.io/)
     2. Confluent kafka的Python客户端： confluent-kafka-python
         - [github地址](https://github.com/confluentinc/confluent-kafka-python)
         - [官方文档](https://docs.confluent.io/current/clients/confluent-kafka-python/index.html#consumer)
@@ -155,3 +156,5 @@ sudo make install DESTDIR='/home/willi/.virtualenvs/dev/lib/python3.5/site-packa
 - [基于 Docker 安装 RocketMQ](https://www.jianshu.com/p/706588323276)
 - [Rocketmq原理&最佳实践](https://www.jianshu.com/p/2838890f3284)
 - [celery 定时任务 ，异步邮箱任务，flower web监控](https://www.jianshu.com/p/4708f752635b)
+- [Docker可视化图形工具Portainer](https://www.portainer.io/installation/)
+- [docker-compose编排单机kafka、kafka集群](https://github.com/confluentinc/examples)
